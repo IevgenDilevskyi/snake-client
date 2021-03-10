@@ -8,9 +8,9 @@ const connect = function() {
   // interpret incoming data as text
   conn.setEncoding('utf8'); 
 
-  conn.on('connect', () => {
-    console.log('Successfully connected to game server');
-    conn.write("Name: JAY");
+  conn.on('connect', () => { // when connection is UP
+    console.log('Successfully connected to game server'); // Show this message
+    conn.write("Name: JAY"); //Send this text to server (appears next to snake)
   });
 
   conn.on('data', (data) => {
