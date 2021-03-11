@@ -11,7 +11,7 @@ const connect = function() {
   conn.on('connect', () => { // when connection is UP
     console.log('Successfully connected to game server'); // Show this message
     conn.write("Name: JAY"); //Send this text to server (appears next to snake)
-  //  conn.write("Move: up"); // Send command to move one block Up
+    conn.write("Move: up"); // Send command to move one block Up
   });
 
   conn.on('data', (data) => {
